@@ -2,37 +2,36 @@ package tests;
 
 import org.testng.annotations.Test;
 import org.openqa.selenium.WebDriver;
-import org.openqa.selenium.WebElement;
-import org.openqa.selenium.chrome.ChromeDriver;
-import org.openqa.selenium.support.FindBy;
-import org.openqa.selenium.support.PageFactory;
-import org.testng.annotations.Test;
+import org.testng.annotations.AfterClass;
+import pages.LoginPage;
+import pages.LogoutPage;
 
 public class LoginTest {
 	
 	WebDriver driver;
 	
-	@FindBy(id="user-name")
-	WebElement user;
-	
-	@FindBy(id="password")
-	WebElement pass;
-	
-	@FindBy(id="login-button")
-	WebElement button;
+	LoginPage lp;
+	LogoutPage lop;
 	
 	@Test
-	public void login() {
-		driver = new ChromeDriver();
-		driver.get("https://www.saucedemo.com/v1/");
-		driver.manage().window().maximize();
-		PageFactory.initElements(driver, this);
-		
-		user.sendKeys("standard_user");
-		pass.sendKeys("secret_sauce");
-		button.click();
-		
-		driver.quit();
+	public void login(){
+		lp = new LoginPage(driver);
+		lp.setUserName();
+		lp.setPassword();
+		lp.click();
+	}
+	
+	@Test
+	public void logout() throws Exception{
+		lop = new LogoutPage(driver);
+		lop.login();
+		Thread.sleep(2000);
+		lop.logout();
+	}
+	
+	@AfterClass
+	public void quit() {
+		if(driver!=null) driver.quit();
 	}
 
 }

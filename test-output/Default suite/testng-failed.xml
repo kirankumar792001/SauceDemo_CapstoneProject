@@ -5,7 +5,7 @@
     <classes>
       <class name="tests.LoginTest">
         <methods>
-          <include name="login"/>
+          <include name="logout"/>
         </methods>
       </class> <!-- tests.LoginTest -->
     </classes>

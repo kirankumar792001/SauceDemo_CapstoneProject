@@ -1,2 +1,4 @@
+pages\LogoutPage.class
+pages\CommonDriverPage.class
 tests\LoginTest.class
 pages\LoginPage.class

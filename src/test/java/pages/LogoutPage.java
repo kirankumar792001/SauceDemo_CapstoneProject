@@ -1,13 +1,10 @@
-//Token
-//	Personal access token: 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
-
 package pages;
 
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.support.FindBy;
 
-public class LoginPage extends CommonDriverPage{
+public class LogoutPage extends CommonDriverPage{
 	
 	@FindBy(id="user-name")
 	WebElement user;
@@ -16,20 +13,27 @@ public class LoginPage extends CommonDriverPage{
 	WebElement pass;
 	
 	@FindBy(id="login-button")
-	WebElement button;
+	WebElement ibtn;
+
+	@FindBy(xpath="//button[text()='Open Menu']")
+	WebElement menu;
 	
-	public LoginPage(WebDriver driver) {
+//	@FindBy(xpath = "//a[contains(.,'Logout')]")
+	@FindBy(xpath = "//a[text()='Logout']")
+	WebElement button;
+
+	public LogoutPage(WebDriver driver) {
 		super(driver);
 	}
 	
-	public void setUserName() {
+	public void login() {
 		user.sendKeys("standard_user");
-	}
-	public void setPassword() {
 		pass.sendKeys("secret_sauce");
+		ibtn.click();
+		menu.click();
 	}
-	public void click(){
+	
+	public void logout(){
 		button.click();
 	}
-
 }

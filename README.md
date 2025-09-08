@@ -43,7 +43,7 @@ saucedemo-automation/
 ## 🚀 How to Run
 1. **Clone the repository**
    ```bash
-   git clone https://github.com/yourusername/saucedemo-automation.git
+   git clone [https://github.com/yourusername/saucedemo-automation.git](https://github.com/kirankumar792001/capstoneProject.git)
    cd saucedemo-automation
    ```
 

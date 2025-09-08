@@ -13,7 +13,7 @@ This project automates the **functional testing of [Saucedemo](https://www.sauce
 - **Maven** for dependency management  
 - **TestNG** for test execution and reporting  
 - Covers **10-15 test cases**:
-  - Login & Logout  
+  - Login 
   - Product Listing & Sorting  
   - Add/Remove Items from Cart  
   - Checkout Process  

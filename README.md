@@ -12,7 +12,7 @@ This project automates the **functional testing of [Saucedemo](https://www.sauce
 - **Cucumber BDD** for behavior-driven testing  
 - **Maven** for dependency management  
 - **TestNG** for test execution and reporting  
-- Covers **15–20 test cases**:
+- Covers **10-15 test cases**:
   - Login & Logout  
   - Product Listing & Sorting  
   - Add/Remove Items from Cart  
@@ -55,11 +55,6 @@ saucedemo-automation/
 3. **Run with TestNG**
    ```bash
    mvn test -DsuiteXmlFile=testng.xml
-   ```
-
-4. **Run with Cucumber**
-   ```bash
-   mvn test -Dcucumber.options="--tags @smoke"
    ```
 
 ## 🧰 Tools & Technologies
